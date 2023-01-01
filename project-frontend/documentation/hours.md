@@ -2,5 +2,5 @@
 
 | day   | hours | description  |
 | :----:|:-----| :-----|
-| 01.01 | x    | setting things up |
-| total | x    | | 
+| 01.01 | 2    | setting things up |
+| total | 2    | | 
