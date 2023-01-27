@@ -10,6 +10,15 @@ const config: ThemeConfig = {
 }
 
 // 3. extend the theme
-const theme = extendTheme({ config })
+const theme = extendTheme({
+  config,
+  styles: {
+    global: () => ({
+      body: {
+        bg: "#121212"
+      }
+    })
+  }
+})
 
 export default theme

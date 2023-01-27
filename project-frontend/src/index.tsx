@@ -16,9 +16,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 const rootElement = document.getElementById('root')
 if (!rootElement) throw new Error('Failed to find the root element');
 ReactDOM.createRoot(rootElement).render(
-  <ChakraProvider>
-    {/* 👇 Here's the script */}
-    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+  <ChakraProvider theme={theme}>
     <App />
   </ChakraProvider>,
 )
