@@ -1,8 +1,8 @@
-import { ReactNode } from 'react'
+import { ReactNode, Fragment } from 'react'
 import { Box, Text, Flex, HStack, Link, useColorModeValue } from "@chakra-ui/react"
 
 const NavBar = () => {
-  const Links = ['Necromancer', 'Rogue', 'Sorceress']
+  const links = ['Necromancer', 'Rogue', 'Sorceress']
 
   const NavLink = ({ children }: { children: ReactNode }) => (
     <Link
@@ -24,14 +24,20 @@ const NavBar = () => {
     <Box bg={useColorModeValue('#222222', 'gray.900')} px={4}>
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         <HStack spacing={8} alignItems={'center'}>
-          <Text color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Text>
+          <Link color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Link>
           <HStack
             as={'nav'}
             spacing={4}
             display={{ base: 'none', md: 'flex' }}>
-            {Links.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
+            {links.map((link, index) => (
+              <Fragment key={link}>
+                <NavLink key={link}>{link}</NavLink>
+                {index < links.length - 1 && (
+                  <Box height="20px" width="1px" bg="#85847E" mx={6} />
+                )}
+              </Fragment>
             ))}
+
           </HStack>
         </HStack>
       </Flex>
