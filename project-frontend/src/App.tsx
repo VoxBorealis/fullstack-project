@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { Container } from "@chakra-ui/react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import BarbarianSkillTree from "./components/BarbarianSkillTree";
 import NavBar from "./components/Navbar";
 
@@ -8,6 +9,7 @@ const App = () => {
     <div className="App">
       <Router>
         <NavBar />
+
         <Routes>
           <Route path="necromancer" element={<BarbarianSkillTree />} />
         </Routes>
