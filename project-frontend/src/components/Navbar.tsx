@@ -10,19 +10,22 @@ const NavBar = () => {
   const NavLink = ({ children }: { children: string }) => {
     console.log(typeof (children))
     return (
-      <Link
-        px={2}
-        py={1}
-        rounded={'md'}
-        color={'#85847E'}
-        _hover={{
-          textDecoration: 'none',
-          bg: useColorModeValue('gray.200', 'gray.700'),
-        }}
-        fontFamily={'heading'}
-      >
-        <RouteLink to={`/${children.toLowerCase()}`}>{children}</RouteLink>
-      </Link>
+
+      <RouteLink to={`/${children.toLowerCase()}`}>
+        <Link
+          px={2}
+          py={1}
+          rounded={'md'}
+          color={'#85847E'}
+          _hover={{
+            textDecoration: 'none',
+            bg: useColorModeValue('gray.200', 'gray.700'),
+          }}
+          fontFamily={'heading'}
+        >
+          {children}
+        </Link>
+      </RouteLink>
     )
   };
 
