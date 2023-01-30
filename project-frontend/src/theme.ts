@@ -12,6 +12,9 @@ const config: ThemeConfig = {
 // 3. extend the theme
 const theme = extendTheme({
   config,
+  fonts: {
+    heading: 'diablo'
+  },
   styles: {
     global: () => ({
       body: {

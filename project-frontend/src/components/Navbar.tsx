@@ -14,6 +14,7 @@ const NavBar = () => {
         textDecoration: 'none',
         bg: useColorModeValue('gray.200', 'gray.700'),
       }}
+      fontFamily={'heading'}
       href={'#'}>
       {children}
     </Link>
@@ -23,7 +24,7 @@ const NavBar = () => {
     <Box bg={useColorModeValue('#222222', 'gray.900')} px={4}>
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         <HStack spacing={8} alignItems={'center'}>
-          <Text color={'#BA4244'} fontFamily={'-moz-initial'}>inar.io</Text>
+          <Text color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Text>
           <HStack
             as={'nav'}
             spacing={4}
