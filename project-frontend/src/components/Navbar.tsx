@@ -10,7 +10,6 @@ const NavBar = () => {
   const NavLink = ({ children }: { children: string }) => {
     console.log(typeof (children))
     return (
-
       <RouteLink to={`/${children.toLowerCase()}`}>
         <Link
           px={2}
@@ -21,8 +20,7 @@ const NavBar = () => {
             textDecoration: 'none',
             bg: useColorModeValue('gray.200', 'gray.700'),
           }}
-          fontFamily={'heading'}
-        >
+          fontFamily={'heading'}>
           {children}
         </Link>
       </RouteLink>
