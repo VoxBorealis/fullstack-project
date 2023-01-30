@@ -1,30 +1,38 @@
 import { ReactNode, Fragment } from 'react'
-import { Box, Text, Flex, HStack, Link, useColorModeValue } from "@chakra-ui/react"
+import { Link as RouteLink } from "react-router-dom";
+
+import { Box, Flex, HStack, Link, useColorModeValue } from "@chakra-ui/react"
+
 
 const NavBar = () => {
   const links = ['Necromancer', 'Rogue', 'Sorceress']
 
-  const NavLink = ({ children }: { children: ReactNode }) => (
-    <Link
-      px={2}
-      py={1}
-      rounded={'md'}
-      color={'#85847E'}
-      _hover={{
-        textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700'),
-      }}
-      fontFamily={'heading'}
-      href={'#'}>
-      {children}
-    </Link>
-  );
+  const NavLink = ({ children }: { children: string }) => {
+    console.log(typeof (children))
+    return (
+      <Link
+        px={2}
+        py={1}
+        rounded={'md'}
+        color={'#85847E'}
+        _hover={{
+          textDecoration: 'none',
+          bg: useColorModeValue('gray.200', 'gray.700'),
+        }}
+        fontFamily={'heading'}
+      >
+        <RouteLink to={`/${children.toLowerCase()}`}>{children}</RouteLink>
+      </Link>
+    )
+  };
 
   return (
     <Box bg={useColorModeValue('#222222', 'gray.900')} px={4}>
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         <HStack spacing={8} alignItems={'center'}>
-          <Link color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Link>
+          <RouteLink to={''}>
+            <Link color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Link>
+          </RouteLink>
           <HStack
             as={'nav'}
             spacing={4}
@@ -37,7 +45,6 @@ const NavBar = () => {
                 )}
               </Fragment>
             ))}
-
           </HStack>
         </HStack>
       </Flex>
