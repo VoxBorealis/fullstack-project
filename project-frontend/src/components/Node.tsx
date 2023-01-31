@@ -19,8 +19,8 @@ const Node = ({ icon }: NodeProps) => {
     }}>
 
     </Box>*/
-    <Box boxSize={'75'} onClick={handleClick}>
-      <Image src={icon} filter={nodeActive ? 'grayscale(0%)' : 'grayscale(100%)'} />
+    <Box boxSize={'75'} onClick={handleClick} border={'4px'} borderColor={nodeActive ? '#8a1517' : '#222222'}>
+      <Image src={icon} filter={nodeActive ? 'grayscale(0%)' : 'grayscale(50%)'} />
       <Text color={'white'}>{nodeActive.toString()}</Text>
     </Box>
   )
