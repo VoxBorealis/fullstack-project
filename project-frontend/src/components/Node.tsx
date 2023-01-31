@@ -20,7 +20,7 @@ const Node = ({ skill }: NodeProps) => {
     }}>
 
     </Box>*/
-    <Box boxSize={'75'} onClick={handleClick} border={'4px'} borderColor={nodeActive ? '#8a1517' : '#222222'} _hover={{ bg: 'gray' }}>
+    <Box boxSize={'75'} onClick={handleClick} border={'4px'} borderColor={nodeActive ? '#8a1517' : '#222222'} _hover={{ filter: 'brightness(150%)' }}>
       <Image src={skill.icon} filter={nodeActive ? 'grayscale(0%)' : 'grayscale(75%)'} />
       <Text color={'white'}>{nodeActive.toString()}</Text>
     </Box>
