@@ -7,23 +7,24 @@ import { Box, Flex, HStack, Link, useColorModeValue } from "@chakra-ui/react"
 const NavBar = () => {
   const links = ['Necromancer', 'Rogue', 'Sorceress']
 
-  const NavLink = ({ children }: { children: string }) => {
-    console.log(typeof (children))
+
+
+  const NavLink2 = ({ children }: { children: string }) => {
     return (
-      <RouteLink to={`/${children.toLowerCase()}`}>
-        <Link
-          px={2}
-          py={1}
-          rounded={'md'}
-          color={'#85847E'}
-          _hover={{
-            textDecoration: 'none',
-            bg: useColorModeValue('gray.200', 'gray.700'),
-          }}
-          fontFamily={'heading'}>
-          {children}
-        </Link>
-      </RouteLink>
+      <Link
+        as={RouteLink}
+        to={`/${children.toLowerCase()}`}
+        px={2}
+        py={1}
+        rounded={'md'}
+        color={'#85847E'}
+        _hover={{
+          textDecoration: 'none',
+          bg: useColorModeValue('gray.200', 'gray.700'),
+        }}
+        fontFamily={'heading'}>
+        {children}
+      </Link>
     )
   };
 
@@ -31,16 +32,14 @@ const NavBar = () => {
     <Box bg={useColorModeValue('#222222', 'gray.900')} px={4}>
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         <HStack spacing={8} alignItems={'center'}>
-          <RouteLink to={''}>
-            <Link color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Link>
-          </RouteLink>
+          <Link as={RouteLink} to={''} color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Link>
           <HStack
             as={'nav'}
             spacing={4}
             display={{ base: 'none', md: 'flex' }}>
             {links.map((link, index) => (
               <Fragment key={link}>
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink2 key={link}>{link}</NavLink2>
                 {index < links.length - 1 && (
                   <Box height="20px" width="1px" bg="#85847E" mx={6} />
                 )}

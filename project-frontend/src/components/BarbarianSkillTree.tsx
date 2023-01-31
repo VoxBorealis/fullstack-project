@@ -28,12 +28,10 @@ const BarbarianSkillTree = () => {
           <Flex justify={'center'}>
             <HStack justify={'center'}>
               <VStack>
-                <img src={'/skill_icon.png'} />
-                <Node />
-                <Node />
-                <Node />
-                <Node />
-                <Node />
+                <Node icon={'/skill_icon.png'} />
+                <Node icon={'/skill_icon.png'} />
+                <Node icon={'/skill_icon.png'} />
+                <Node icon={'/skill_icon.png'} />
               </VStack>
 
             </HStack>
