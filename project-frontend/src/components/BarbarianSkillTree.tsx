@@ -22,12 +22,12 @@ const BarbarianSkillTree = () => {
 
 
   return (
-    <TransformWrapper doubleClick={{ 'disabled': true }} wheel={{ 'step': 0.08 }}>
+    <TransformWrapper doubleClick={{ 'disabled': true }} wheel={{ 'step': 0.08 }} initialScale={1}>
       <TransformComponent>
-        <Container h={'95vh'} w={'100vw'} maxW={'full'}>
+        <Container h={'95vh'} w={'100vw'} maxW={'full'} py={'32'}>
           <Flex justify={'center'}>
             <HStack justify={'center'}>
-              <VStack>
+              <VStack spacing={10}>
                 <Node icon={'/skill_icon.png'} />
                 <Node icon={'/skill_icon.png'} />
                 <Node icon={'/skill_icon.png'} />

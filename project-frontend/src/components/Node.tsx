@@ -1,13 +1,16 @@
-import { Box, Image } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Image, Text } from '@chakra-ui/react'
+import { MouseEvent, useState } from 'react'
 
 interface NodeProps {
   icon: string
 }
 
 const Node = ({ icon }: NodeProps) => {
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const [nodeActive, setNodeActive] = useState(false)
+  const handleClick = (event: MouseEvent<HTMLElement>) => {
     console.log(`clicked on: ${event.target}`)
+    console.log(nodeActive)
+    nodeActive ? setNodeActive(false) : setNodeActive(true)
   }
 
   return (
@@ -16,8 +19,9 @@ const Node = ({ icon }: NodeProps) => {
     }}>
 
     </Box>*/
-    <Box boxSize={'75'}>
-      <Image src={icon} filter={'grayscale(50%)'} onClick={handleClick} />
+    <Box boxSize={'75'} onClick={handleClick}>
+      <Image src={icon} filter={nodeActive ? 'grayscale(0%)' : 'grayscale(100%)'} />
+      <Text color={'white'}>{nodeActive.toString()}</Text>
     </Box>
   )
 }
