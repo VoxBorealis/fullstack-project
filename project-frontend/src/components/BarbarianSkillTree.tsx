@@ -1,8 +1,9 @@
-import { Stack, Container, Flex, VStack, HStack } from '@chakra-ui/react'
+import { Container, Flex, VStack, HStack } from '@chakra-ui/react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Node from './Node'
+import { Skill } from '../types';
 
 const BarbarianSkillTree = () => {
   /*useEffect(() => {
@@ -18,7 +19,15 @@ const BarbarianSkillTree = () => {
     };
     void fetchSkillIcons();
   }, [])*/
-
+  const callOfTheAncients: Skill = {
+    name: 'Call of the Ancients',
+    icon: '/skill_icon.png',
+    rank: 0,
+    description: '<p><span class="d3-color-gold\
+                ">Generate:</span> <span class="d3-color-green\
+                ">6</span> Fury per attack</p>\n\n<p>Brutally smash an enemy for <span class=\
+                "d3-color-green">320%</span> weapon damage.</p>'
+  }
 
 
   return (
@@ -28,10 +37,10 @@ const BarbarianSkillTree = () => {
           <Flex justify={'center'}>
             <HStack justify={'center'}>
               <VStack spacing={10}>
-                <Node icon={'/skill_icon.png'} />
-                <Node icon={'/skill_icon.png'} />
-                <Node icon={'/skill_icon.png'} />
-                <Node icon={'/skill_icon.png'} />
+                <Node skill={callOfTheAncients} />
+                <Node skill={callOfTheAncients} />
+                <Node skill={callOfTheAncients} />
+                <Node skill={callOfTheAncients} />
               </VStack>
 
             </HStack>
