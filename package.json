@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "16.14.0"
+  },
   "name": "fullstack-project",
   "version": "1.0.0",
   "description": "",
@@ -11,7 +14,7 @@
     "start": "node server/dist/index.js",
     "tsc": "tsc -p server/",
     "dev": "ts-node-dev server/index.ts",
-    "lint": "eslint --ext .ts ."
+    "lint": "eslint --ext .ts server/"
   },
   "repository": {
     "type": "git",

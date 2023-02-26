@@ -8,9 +8,22 @@ on:
     branches: [main]
     type: [opened, synchronize]
 
+env:
+  FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+
 jobs:
   deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
+      - uses: superfly/flyctl-actions/setup-flyctl@master
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: npm install 
+        run: npm install
+      - name: build
+        run: npm run build:full
+      - name: fly-deploy
+        run: flyctl deploy --remote-only
       
