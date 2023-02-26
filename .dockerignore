@@ -1,6 +1,5 @@
 # flyctl launch added from .gitignore
 node_modules
-build
 
 # flyctl launch added from project-frontend\.gitignore
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
