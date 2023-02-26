@@ -14,7 +14,8 @@
     "start": "node server/dist/index.js",
     "tsc": "tsc -p server/",
     "dev": "ts-node-dev server/index.ts",
-    "lint": "eslint --ext .ts server/"
+    "lint": "eslint --ext .ts server/",
+    "cicd-install": "npm install && cd project-frontend && npm install"
   },
   "repository": {
     "type": "git",

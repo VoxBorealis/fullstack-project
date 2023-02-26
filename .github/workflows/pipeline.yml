@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: '16'
       - name: npm install 
-        run: npm install
+        run: npm run cicd-install
       - name: build
         run: npm run build:full
       - name: fly-deploy
