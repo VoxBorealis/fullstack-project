@@ -7,9 +7,7 @@ import { Box, Flex, HStack, Link, useColorModeValue } from "@chakra-ui/react"
 const NavBar = () => {
   const links = ['Necromancer', 'Rogue', 'Sorceress']
 
-
-
-  const NavLink2 = ({ children }: { children: string }) => {
+  const NavLink = ({ children }: { children: string }) => {
     return (
       <Link
         as={RouteLink}
@@ -29,7 +27,7 @@ const NavBar = () => {
   };
 
   return (
-    <Box bg={useColorModeValue('#222222', 'gray.900')} px={4}>
+    <Box bg={'#222222'} px={4}>
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         <HStack spacing={8} alignItems={'center'}>
           <Link as={RouteLink} to={''} color={'#BA4244'} fontFamily={'heading'} fontSize={24}>inar.io</Link>
@@ -39,7 +37,7 @@ const NavBar = () => {
             display={{ base: 'none', md: 'flex' }}>
             {links.map((link, index) => (
               <Fragment key={link}>
-                <NavLink2 key={link}>{link}</NavLink2>
+                <NavLink key={link}>{link}</NavLink>
                 {index < links.length - 1 && (
                   <Box height="20px" width="1px" bg="#85847E" mx={6} />
                 )}
