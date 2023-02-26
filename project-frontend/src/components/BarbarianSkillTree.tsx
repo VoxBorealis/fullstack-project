@@ -1,6 +1,4 @@
 import { Container, Flex, VStack, HStack } from '@chakra-ui/react'
-import axios from 'axios'
-import { useEffect } from 'react'
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Node from './Node'
 import { Skill } from '../types';
@@ -23,10 +21,7 @@ const BarbarianSkillTree = () => {
     name: 'Call of the Ancients',
     icon: '/skill_icon.png',
     rank: 0,
-    description: '<p><span class="d3-color-gold\
-                ">Generate:</span> <span class="d3-color-green\
-                ">6</span> Fury per attack</p>\n\n<p>Brutally smash an enemy for <span class=\
-                "d3-color-green">320%</span> weapon damage.</p>'
+    description: 'Summons the powers of the Ancients to...'
   }
 
 

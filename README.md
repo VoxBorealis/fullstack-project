@@ -1,6 +1,6 @@
-##Inar.io
+## Inar.io
 
-###Diablo IV Character Planning Tool
+### Diablo IV Character Planning Tool
 
 #### `npm run build:full`
 
