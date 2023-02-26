@@ -31,7 +31,12 @@ const BarbarianSkillTree = () => {
 
 
   return (
-    <TransformWrapper doubleClick={{ 'disabled': true }} wheel={{ 'step': 0.08 }} initialScale={1}>
+    <TransformWrapper
+      doubleClick={{ 'disabled': true }}
+      wheel={{ 'step': 0.08 }}
+      initialScale={1}
+      panning={{ 'velocityDisabled': true, 'excluded': ['talent'] }}
+    >
       <TransformComponent>
         <Container h={'95vh'} w={'100vw'} maxW={'full'} py={'32'}>
           <Flex justify={'center'}>

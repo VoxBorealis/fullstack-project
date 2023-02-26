@@ -17,3 +17,9 @@ app.listen(PORT, () => {
 app.get('/health', (_req, res) => {
   res.send('ok');
 });
+
+// React Router doesn't work properly in deployment.
+// This prevents 404 when reloading from outside home page
+app.get('/*', (_req, res) => {
+  res.sendFile(path.join(__dirname, buildPath, 'index.html'));
+});
