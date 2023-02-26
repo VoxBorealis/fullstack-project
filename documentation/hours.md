@@ -7,7 +7,7 @@
 | 28.01 | 2    | some early design in Figma |
 | 30.01 | 5    | add routes/navbar/zoom&pan |
 | 31.01 | 4    | a lot of progress on skill nodes |
+| 27.02 | 11   | project architecture, deployment to fly.io, ci/cd |
 
 
-
-| total | 16    | | 
+| total | 27    | | 

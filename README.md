@@ -1,4 +1,6 @@
-## Inar.io
+# inarius.io
+
+https://inarius-io.fly.dev/
 
 ### Diablo IV Character Planning Tool
 
