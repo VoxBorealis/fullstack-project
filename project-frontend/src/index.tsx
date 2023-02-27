@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import theme from './theme';
 import './index.css'
+import 'react-tooltip/dist/react-tooltip.css'
 
 import { ChakraProvider } from '@chakra-ui/react';
 

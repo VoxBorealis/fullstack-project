@@ -8,22 +8,22 @@ interface NodeProps {
 
 const Node = ({ skill }: NodeProps) => {
   const [nodeActive, setNodeActive] = useState(false)
-  const handleClick = (event: MouseEvent<HTMLElement>) => {
-    console.log(`clicked on: ${event.target}`)
-    console.log(nodeActive)
+  const [tooltipActive, setTooltipActive] = useState(false)
+
+  const handleClick = (_event: MouseEvent<HTMLElement>) => {
     nodeActive ? setNodeActive(false) : setNodeActive(true)
+  }
+  const handleHover = (_event: any) => {
+    tooltipActive ? setTooltipActive(false) : setTooltipActive(true)
   }
 
   return (
-    /*<Box w={"64px"} h={"64px"} bg={'#222222'} _hover={{
-      bg: "gray"
-    }}>
-
-    </Box>*/
-    <Box boxSize={'75'} onClick={handleClick} border={'4px'} borderColor={nodeActive ? '#8a1517' : '#222222'} _hover={{ filter: 'brightness(150%)' }} className={'talent'}>
-      <Image src={skill.icon} filter={nodeActive ? 'grayscale(0%)' : 'grayscale(75%)'} />
-      <Text color={'white'}>{nodeActive.toString()}</Text>
-    </Box>
+    <div>
+      <Box boxSize={'30'} data-tooltip-id="my-tooltip" onClick={handleClick} border={'1px'} onMouseLeave={handleHover} onMouseEnter={handleHover} borderColor={nodeActive ? '#8a1517' : '#222222'} _hover={{ filter: 'brightness(150%)' }} className={'talent'}>
+        <Image src={skill.icon} filter={nodeActive ? 'grayscale(0%)' : 'grayscale(75%)'} />
+        <Text fontSize={10} color={'white'}>{tooltipActive.toString()}</Text>
+      </Box>
+    </div>
   )
 }
 

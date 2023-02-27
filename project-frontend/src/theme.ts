@@ -13,7 +13,7 @@ const config: ThemeConfig = {
 const theme = extendTheme({
   config,
   fonts: {
-    heading: 'diablo'
+    diablo: 'diablo'
   },
   styles: {
     global: () => ({
