@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:e2e": "cd project-frontend && npm run cypress:run",
     "build:ui": "cd server && rm -rf build && cd ../project-frontend && npm run build && cp -r build ../server",
     "build:server": "npm run tsc",
     "build:full": "npm run build:ui && npm run build:server",
