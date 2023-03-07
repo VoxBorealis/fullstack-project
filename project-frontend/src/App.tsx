@@ -9,6 +9,7 @@ const App = () => {
       <Router>
         <NavBar />
         <Routes>
+          <Route path="" element={<BarbarianSkillTree />} />
           <Route path="necromancer" element={<BarbarianSkillTree />} />
         </Routes>
       </Router>

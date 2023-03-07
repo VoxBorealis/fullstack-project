@@ -1,4 +1,4 @@
-import { Container, Flex, VStack, HStack, Heading } from '@chakra-ui/react'
+import { Container, Heading } from '@chakra-ui/react'
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import Node from './Node'
 import { Skill } from '../types';
@@ -38,21 +38,14 @@ const BarbarianSkillTree = () => {
       >
         <TransformComponent>
           <Container h={'95vh'} w={'100vw'} maxW={'full'} py={'32'}>
-            <Flex justify={'center'}>
-              <HStack justify={'center'}>
-                <VStack spacing={10}>
-                  <Node skill={callOfTheAncients} />
-                  <Node skill={callOfTheAncients} />
-                  <Node skill={callOfTheAncients} />
-                  <Node skill={callOfTheAncients} />
-                </VStack>
+            <Node skill={callOfTheAncients} position={{ left: '0', top: '0' }} />
+            <Node skill={callOfTheAncients} position={{ left: '-50', top: '50' }} />
+            <Node skill={callOfTheAncients} position={{ left: '50', top: '50' }} />
 
-              </HStack>
-            </Flex>
           </Container>
         </TransformComponent>
       </TransformWrapper>
-      <Tooltip id="my-tooltip" place='right' style={{ padding: 25 }}>
+      <Tooltip id="my-tooltip" place='right' noArrow={true} offset={25} style={{ padding: 25 }}>
         <div>
           <Heading as='h3' size={'md'}>Call of the Ancients</Heading>
           <p>Here's some interesting stuff:</p>

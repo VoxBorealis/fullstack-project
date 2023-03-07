@@ -9,6 +9,8 @@
 | 31.01 | 4    | a lot of progress on skill nodes |
 | 27.02 | 11   | project architecture, deployment to fly.io, ci/cd |
 | 28.02 | 4.5  | struggle with tooltips & add e2e tests to deployment pipeline |
+| 07.03 | 2    | try different things with positionings & lines between nodes... |
 
 
-| total | 31.5    | | 
+
+| total | 33.5    | | 
